@@ -1,16 +1,17 @@
 import tkinter as tk
 
 """
-Simple GUI that converts tempature in fahrenheit to temperature in kelvin 
+Simple GUI that converts degrees in fahrenheit to degrees in kelvin 
 """
 
 class KelvinConverter():
 
 
-
     def __init__(self):
         """
-        Purpose: initializes the operation of the KelvinConverter class and run
+        Purpose: initializes the operation of the KelvinConverter class and runs the GUI
+
+        :returns: nothing 
         """
         window = tk.Tk()
         window.title("Temperature Converter")
@@ -35,13 +36,18 @@ class KelvinConverter():
         window.mainloop()
 
     def convert_kelvin(self):
+        """
+        Purpose: converts degrees fahrenheit to degrees kelvin for button
+
+        :returns: nothing 
+        """
         temp_fahrenheit = self.ent_temperature.get()
 
         temp_kelvin = ((int(temp_fahrenheit) - 32) * 5/9 + 273.15)
         self.lbl_result["text"] = f"{round(temp_kelvin, 2)} \N{KELVIN SIGN}"
 
 def main():
-    converter = KelvinConverter()
+    converter = KelvinConverter() #class is created to run program
     
 
 if __name__ == "__main__":
