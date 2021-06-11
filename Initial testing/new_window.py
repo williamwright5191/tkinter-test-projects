@@ -2,4 +2,13 @@ import tkinter as tk
 
 window = tk.Tk()
 
-greeting = tk.Label(text = "Hello! I am learning tkinter!")
+label = tk.Button(
+    text="Hello, Tkinter",
+    foreground="white",  # Set the text color to white
+    background="green",  # Set the background color to black
+    width=30, 
+    height=10
+)
+label.pack()
+
+window.mainloop()
