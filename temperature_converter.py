@@ -1,10 +1,22 @@
 import tkinter as tk
 
+"""
+Simple GUI that converts tempature in fahrenheit to temperature in kelvin 
+"""
+
 class KelvinConverter():
 
+
+
     def __init__(self):
+        """
+        Purpose: initializes the operation of the KelvinConverter class and run
+        """
         window = tk.Tk()
         window.title("Temperature Converter")
+
+        window.rowconfigure(0, minsize=50, weight=1)
+        window.columnconfigure([0, 1, 2], minsize=40, weight=1)
 
         frm_entry = tk.Frame(master=window)
         self.ent_temperature = tk.Entry(master=frm_entry, width=10)
